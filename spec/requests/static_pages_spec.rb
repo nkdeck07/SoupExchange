@@ -6,7 +6,7 @@ describe "Static pages" do
 
     it "should have the content 'Soup Exchange'" do
       visit root_path
-      page.should have_content('Welcome to the Soup Exchange')
+      page.should have_selector('h1', text: 'Welcome to the Soup Exchange')
     end
   end
 end
