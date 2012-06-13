@@ -1,0 +1,15 @@
+<nav>
+	<%= link_to("Home",root_path) %>
+	<% if signed_in? %>
+		<%= link_to("My Profile", current_user) %> 
+	<% else %>
+		<%= link_to("Sign In", signin_path) %>
+	<% end %>
+	
+	<%= link_to("This Week", root_path) %> 
+	<%= link_to("All Soups", soups_path) %> 
+	<%= link_to("Add New soup ", new_soup_path) %>
+	<% if signed_in? %>
+		<%= link_to("Sign Out", signout_path, method: "delete") %> 
+	<% end %>
+</nav>

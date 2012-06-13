@@ -1,0 +1,20 @@
+<%= provide(:title, 'New Soup') %>
+
+    <%= form_for(@soup) do |f| %>
+         
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+     
+
+      <%= f.label :ingredients %>
+      <%= f.text_area :ingredients %>
+
+
+      <%= f.label :recipe %>
+      <%= f.text_area :recipe %>
+
+
+      <%= f.submit "Save Recipe"%>
+    <% end %>
+  </div>
+</div>

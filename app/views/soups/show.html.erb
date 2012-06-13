@@ -1,0 +1,18 @@
+<% provide(:title, @soup.title) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= @soup.title %>
+      </h1>
+      <h3> Ingredients </h3>
+      <%= create_unordered_list(@soup.ingredients, 'ingredients') %>
+
+      <h3> Directions </h3>
+      <%= create_ordered_list(@soup.recipe, 'recipe') %>
+
+      <%= link_to("Edit Soup", edit_soup_path(@soup)) %>
+      <%= link_to("Delete Soup", @soup, :method => :delete) %>
+    </section>
+  </aside>
+</div>
